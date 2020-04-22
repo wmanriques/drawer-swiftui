@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F2D3F1E7244FBB80003C217A /* DrawerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D3F1E5244FBB80003C217A /* DrawerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2D3F1F2244FBD2A003C217A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3F1F1244FBD2A003C217A /* ContentView.swift */; };
+		F2D3F1F4244FBD52003C217A /* Drawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D3F1F3244FBD52003C217A /* Drawer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F2D3F1E2244FBB80003C217A /* DrawerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrawerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D3F1E5244FBB80003C217A /* DrawerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawerView.h; sourceTree = "<group>"; };
 		F2D3F1E6244FBB80003C217A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D3F1F1244FBD2A003C217A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F2D3F1F3244FBD52003C217A /* Drawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				F2D3F1E5244FBB80003C217A /* DrawerView.h */,
 				F2D3F1E6244FBB80003C217A /* Info.plist */,
+				F2D3F1F1244FBD2A003C217A /* ContentView.swift */,
+				F2D3F1F3244FBD52003C217A /* Drawer.swift */,
 			);
 			path = DrawerView;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					F2D3F1E1244FBB80003C217A = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -131,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D3F1F2244FBD2A003C217A /* ContentView.swift in Sources */,
+				F2D3F1F4244FBD52003C217A /* Drawer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 		F2D3F1EB244FBB80003C217A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -275,6 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = wsk.DrawerView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -283,6 +294,7 @@
 		F2D3F1EC244FBB80003C217A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
