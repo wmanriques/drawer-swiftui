@@ -8,9 +8,10 @@
 
 import SwiftUI
 
-struct Drawer: View {
+struct Drawer<Content: View>: View {
     
     @Binding var isOpen: Bool
+    var content: Content
     
     var body: some View {
         
@@ -30,14 +31,7 @@ struct Drawer: View {
             GeometryReader{ geometry in
                 
                 VStack {
-                    ForEach(0...2, id: \.self) { item in
-                        HStack {
-                            Text("\(geometry.safeAreaInsets.bottom)")
-                            .padding()
-                            Spacer()
-                        }
-                    }
-                    .padding(.top)
+                    self.content
                     Spacer()
                     Spacer()
                         .frame(height: geometry.safeAreaInsets.bottom)
@@ -58,7 +52,7 @@ struct Drawer: View {
 
 struct Drawer_Previews: PreviewProvider {
     static var previews: some View {
-        Drawer(isOpen: .constant(true))
+        Drawer(isOpen: .constant(true), content: Text("content"))
     }
 }
 
